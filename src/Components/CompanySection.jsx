@@ -6,7 +6,7 @@ const FeaturedIn = () => {
     { name: 'GeekWire', src: 'geekwire-logo.png', alt: 'GeekWire Logo' },
     { name: 'Forbes', src: 'forbes-logo.png', alt: 'Forbes Logo' },
     { name: 'USA Today', src: 'usa-today-logo.png', alt: 'USA Today Logo' },
-    { name: 'Envato', src: 'envato-logo.png', alt: 'Envato Logo' },
+    //{ name: 'Envato', src: 'envato-logo.png', alt: 'Envato Logo' },
   ];
 
   return (
