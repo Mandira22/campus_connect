@@ -10,9 +10,16 @@ const FeaturedIn = () => {
   ];
 
   return (
-    <div className="py-15 bg-gray-50 border-b border-gray-200">
+    <div className="py-15 bg-red-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-5 gap-8 items-center justify-center">
+        {/*
+          Responsive Grid Columns:
+          - By default (for extra small screens): 2 columns
+          - On small screens (sm): 3 columns
+          - On medium screens (md): 4 columns
+          - On large screens (lg) and up: 5 columns
+        */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-x-4 sm:gap-x-8 items-center justify-center">
           {logos.map((logo) => (
             <div key={logo.name} className="flex justify-center">
               <img

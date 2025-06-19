@@ -2,7 +2,7 @@ import React from "react";
 
 const HireByStartups = () => {
   return (
-    <div className="bg-gray-200 h-screen py-16">
+    <div className="bg-red-50 h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-30 items-center">
         {/* Left Column - Text Content */}
         <div>

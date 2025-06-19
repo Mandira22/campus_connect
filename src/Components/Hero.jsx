@@ -2,34 +2,31 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="h-screen bg-emerald-50 relative overflow-hidden">
+    <div className="bg-[url('/Rungta_College_Campus.jpg')] bg-cover bg-no-repeat bg-center h-screen   relative overflow-hidden"
+>
+
+        <div className="absolute inset-0 backdrop-blur-sm z-0"></div>
       {/* Added relative and overflow-hidden */}
-      <div className="absolute top-10 right-10 w-1/2 h-full -z-0 animate-pulse">
-        <img
-          src="circle2.png"
-          alt="circle"
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="absolute top-5 right-10 w-1/2 h-full ">
-        {" "}
-        {/* Position to the top-right and take half the height */}
-        <img
-          src="man developer.png"
-          alt="Job Search Illustration"
-          className="w-full h-full object-contain"
-        />
-      </div>
-      <div className="relative py-16 md:py-32">
+      
+      <div className="relative py-16 ">
         {" "}
         {/* Keep this relative for the text and input */}
-        <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-zinc-800 pt-15 px-30 mb-0 bg-clip-text">
-          Find Exciting
-          <br /> Jobs Today.
+        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-800 pt-8 sm:pt-10 md:pt-16 px-4 sm:px-3 md:px-12 lg:px-30 mb-0 bg-clip-text">
+          <span className="block sm:block md:hidden lg:hidden">
+            Find Exciting Jobs Today.
+          </span>
+
+          {/* Medium and large screens multiline */}
+          <span className="hidden md:inline">
+            Find Exciting <br />
+            Jobs Today.
+          </span>
         </div>
         <div className="pt-6 px-30 fond-bold">
           Get the most exciting jobs from all around <br />
           the world and grow your career fast with others.
+
+          <span className=""></span>
         </div>
         <div className="pt-15 px-29">
           <div className="flex items-center bg-white rounded-xl shadow-md p-4 gap-4 w-full max-w-3xl">
@@ -61,7 +58,7 @@ const HeroSection = () => {
         </div>
         <div className="pt-6 px-30">
           Popular Search:{" "}
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-gray-900">
             Software Developer, UX Designer, Marketer
           </span>
         </div>

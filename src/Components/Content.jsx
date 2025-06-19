@@ -12,7 +12,7 @@ const Content = () => {
     { name: "Project Management", count: 54, color: "bg-pink-500" },
   ];
   return (
-    <div className="h-screen bg-white relative overflow-hidden">
+    <div className="h-screen bg-red-50 relative overflow-hidden">
       <div className=" container flex justify-start gap-90">
         <div className=" sm:text-3xl md:text-4xl  text-zinc-800 pt-20 px-35 mb-0 bg-clip-text">
           Explore Jobs by <br />
@@ -23,7 +23,7 @@ const Content = () => {
           and grow your career fast with others.
         </div>
       </div>
-      <div className="bg-white pt-25">
+      <div className="bg-red-50 pt-25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {categories.map((category) => (
