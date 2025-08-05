@@ -1,38 +1,60 @@
-import React from 'react';
+import React from "react";
 
-const FeaturedIn = () => {
-  const logos = [
-    { name: 'Slack', src: 'slack-logo.png', alt: 'Slack Logo' }, // Replace with actual image paths
-    { name: 'GeekWire', src: 'geekwire-logo.png', alt: 'GeekWire Logo' },
-    { name: 'Forbes', src: 'forbes-logo.png', alt: 'Forbes Logo' },
-    { name: 'USA Today', src: 'usa-today-logo.png', alt: 'USA Today Logo' },
-    //{ name: 'Envato', src: 'envato-logo.png', alt: 'Envato Logo' },
-  ];
+const companyData = [
+  { name: "Slack", src: "https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png" },
+  { name: "Netflix", src: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
+  { name: "Amazon", src: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
+  { name: "Spotify", src: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" },
+  { name: "Google", src: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
+];
+
+const InfiniteLogoSlider = () => {
+  const logos = [...companyData, ...companyData]; // duplicate once for smooth scroll
 
   return (
-    <div className="py-15 bg-red-50 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/*
-          Responsive Grid Columns:
-          - By default (for extra small screens): 2 columns
-          - On small screens (sm): 3 columns
-          - On medium screens (md): 4 columns
-          - On large screens (lg) and up: 5 columns
-        */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-x-4 sm:gap-x-8 items-center justify-center">
-          {logos.map((logo) => (
-            <div key={logo.name} className="flex justify-center">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="h-6 md:h-8 object-contain grayscale opacity-70 hover:opacity-100 transition-opacity duration-200"
-              />
-            </div>
-          ))}
-        </div>
+    <>
+      <style>{`
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .scrolling-slide {
+    animation: scroll 30s linear infinite;
+  }
+`}</style>
+
+<div className="overflow-hidden bg-gray-100 py-4 sm:py-6">
+  <div className="flex min-w-fit scrolling-slide">
+    {[...companyData, ...companyData, ...companyData].map((logo, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center mx-4 sm:mx-8 shrink-0"
+      >
+        <img
+          src={logo.src}
+          alt={logo.name}
+          className="h-12 sm:h-20 w-auto object-contain mb-1 sm:mb-2"
+        />
+        <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">
+          {logo.name}
+        </span>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
+    </>
   );
 };
 
-export default FeaturedIn;
+export default InfiniteLogoSlider;
+
+
+
+
+
+

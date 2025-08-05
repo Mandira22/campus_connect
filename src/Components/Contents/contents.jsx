@@ -1,6 +1,6 @@
 import React from "react";
 
-const Content = () => {
+const Contents = () => {
   const categories = [
     { name: "Digital Marketing", count: 37, color: "bg-teal-500" },
     { name: "Content Writing", count: 55, color: "bg-orange-500" },
@@ -49,4 +49,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Contents;
